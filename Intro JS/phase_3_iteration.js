@@ -13,3 +13,14 @@ Array.prototype.bubbleSort = function bubbleSort() {
   };
   return this;
 }
+
+String.prototype.substrings = function substrings() {
+  let return_array = [];
+  
+  for (let i = 0; i < this.length; i++) {
+    for (let j = i+1; j <= this.length; j++) {
+      return_array.push(this.slice(i,j));
+    };
+  };
+  console.log(return_array);
+}

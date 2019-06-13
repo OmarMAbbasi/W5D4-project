@@ -11,9 +11,10 @@ function printer(element) {
 
 Array.prototype.myMap = function myMap(callback) {
   const mappedArray = []
-  for (let i = 0; i < this.length; i++) {
-    mappedArray.push(callback(this[i]));
-  }
+  this.myEach(ele => mappedArray.push(callback(ele)))
+  // for (let i = 0; i < this.length; i++) {
+  //   mappedArray.push(callback(this[i]));
+  // }
   return mappedArray;
 };
 
